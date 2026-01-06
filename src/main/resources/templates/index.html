@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Accueil - Gestion École</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      text-align: center;
+      margin-top: 50px;
+    }
+    h1 {
+      color: #007bff;
+    }
+    .module-link {
+      display: inline-block;
+      margin: 20px;
+      padding: 20px 40px;
+      background-color: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 1.2em;
+    }
+    .module-link:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h1>🎓 Bienvenue - Gestion École</h1>
+  <p>Sélectionnez un module pour commencer :</p>
+  <hr style="width: 50%; margin: 20px auto;"/>
+
+  <div>
+    <a th:href="@{/app/eleves/lister}" class="module-link">Gérer les Élèves</a>
+  </div>
+  <div>
+    <a th:href="@{/app/filieres/lister}" class="module-link">Gérer les Filières</a>
+  </div>
+  <div>
+    <a th:href="@{/app/cours/lister}" class="module-link">Gérer les Cours</a>
+  </div>
+</div>
+</body>
+</html>
