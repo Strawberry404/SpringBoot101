@@ -34,7 +34,7 @@ public class FiliereController {
     }
 
     @GetMapping("/delete/{id}")
-    public String delete(@PathVariable("id") int id) {
+    public String delete(@PathVariable("id") Integer id) {
         // Ensure your FiliereService has this method!
         service.deleteById(id);
         return "redirect:/app/filieres/lister";

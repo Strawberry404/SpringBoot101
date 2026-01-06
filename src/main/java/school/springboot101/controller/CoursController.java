@@ -39,7 +39,7 @@ public class CoursController {
     }
 
     @GetMapping("/delete/{id}")
-    public String delete(@PathVariable("id") int id) {
+    public String delete(@PathVariable("id") Integer id) {
         // Make sure CoursService has deleteById(int id)!
         service.deleteById(id);
         return "redirect:/app/cours/lister";

@@ -48,7 +48,7 @@ public class EleveController {
 
     }
     @GetMapping("/delete/{id}")
-    public String delete(@PathVariable("id") int id) {
+    public String delete(@PathVariable("id") Integer id) {
         service.deleteById(id);
         return "redirect:/app/eleves/lister";    }
 
